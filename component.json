@@ -1,0 +1,72 @@
+{
+  "title": "Microsoft Graph Adapter",
+  "description": "Microsoft Graph Adapter for Open Integration Hub (based on https://github.com/elasticio/outlook/).",
+  "envVars":
+  {
+    "MSAPP_CLIENT_ID":
+    {
+      "required": true,
+      "description": ""
+    },
+    "MSAPP_CLIENT_SECRET":
+    {
+      "required": true,
+      "description": ""
+    }
+  },
+  "credentials":
+  {
+    "fields":
+    {
+      "oauth":
+      {
+        "label": "Authentication",
+        "viewClass": "OAuthFieldView",
+        "required": true
+      }
+    },
+    "oauth2":
+    {
+      "client_id": "{{MSAPP_CLIENT_ID}}",
+      "client_secret": "{{MSAPP_CLIENT_SECRET}}",
+      "auth_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+      "token_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "scopes":
+      [
+        "openid",
+        "offline_access",
+        "User.Read",
+        "Contacts.ReadWrite",
+        "Profile",
+        "Calendars.ReadWrite"
+      ]
+    }
+  },
+  "triggers":
+  {
+    "getContacts":
+    {
+      "title": "getContacts",
+      "main": "./lib/triggers/getContacts.js",
+      "type": "polling",
+      "metadata":
+      {
+        "in": {},
+        "out": "./lib/schemas/contacts.out.json"
+      }
+    }
+  },
+  "actions":
+  {
+    "addContact":
+    {
+      "title": "addContact",
+      "main": "./lib/actions/addContact.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addContact.in.json",
+        "out": "./lib/schemas/addContact.out.json"
+      }
+    }
+  }
+}

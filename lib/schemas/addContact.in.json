@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "properties": {
+    "requestBody": {
+      "title": "Contact model",
+      "description": "Contact model",
+      "properties": {
+        "assistantName": {
+          "description": "The assistantName",
+          "type": "string"
+        },
+        "birthday": {
+          "description": "The birthday",
+          "type": "string",
+          "format": "date-time"
+        },
+        "businessHomePage": {
+          "description": "The businessHomePage",
+          "type": "string"
+        },
+        "changeKey": {
+          "description": "The changeKey",
+          "type": "string"
+        },
+        "companyName": {
+          "description": "The companyName",
+          "type": "string"
+        },
+        "department": {
+          "description": "The department",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "The displayName",
+          "type": "string"
+        },
+        "fileAs": {
+          "description": "The fileAs",
+          "type": "string"
+        },
+        "generation": {
+          "description": "The generation",
+          "type": "string"
+        },
+        "givenName": {
+          "description": "The givenName",
+          "type": "string"
+        },
+        "id": {
+          "description": "The id",
+          "type": "string",
+          "readOnly": true
+        },
+        "initials": {
+          "description": "The initials",
+          "type": "string"
+        },
+        "jobTitle": {
+          "description": "The jobTitle",
+          "type": "string"
+        },
+        "manager": {
+          "description": "The manager",
+          "type": "string"
+        },
+        "middleName": {
+          "description": "The middleName",
+          "type": "string"
+        },
+        "mobilePhone": {
+          "description": "The mobilePhone",
+          "type": "string"
+        },
+        "nickName": {
+          "description": "The nickName",
+          "type": "string"
+        },
+        "officeLocation": {
+          "description": "The officeLocation",
+          "type": "string"
+        },
+        "parentFolderId": {
+          "description": "The parentFolderId",
+          "type": "string"
+        },
+        "personalNotes": {
+          "description": "The personalNotes",
+          "type": "string"
+        },
+        "profession": {
+          "description": "The profession",
+          "type": "string"
+        },
+        "spouseName": {
+          "description": "The spouseName",
+          "type": "string"
+        },
+        "surname": {
+          "description": "The surname",
+          "type": "string"
+        },
+        "title": {
+          "description": "The title",
+          "type": "string"
+        },
+        "yomiCompanyName": {
+          "description": "The yomiCompanyName",
+          "type": "string"
+        },
+        "yomiGivenName": {
+          "description": "The yomiGivenName",
+          "type": "string"
+        },
+        "yomiSurname": {
+          "description": "The yomiSurname",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
