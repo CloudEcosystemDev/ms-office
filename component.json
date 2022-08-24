@@ -52,9 +52,20 @@
       "metadata":
       {
         "in": {},
-        "out": "./lib/schemas/contacts.out.json"
+        "out": "./lib/schemas/getContacts.out.json"
       }
-    }
+    },
+    "getEvents":
+    {
+      "title": "getEvents",
+      "main": "./lib/triggers/getEvents.js",
+      "type": "polling",
+      "metadata":
+      {
+        "in": {},
+        "out": "./lib/schemas/getEvents.out.json"
+      }
+    }    
   },
   "actions":
   {
