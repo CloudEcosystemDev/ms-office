@@ -40,8 +40,16 @@
           },
           "end": {
             "description": "The end",
-            "type": "string",
-            "format": "date-time"
+            "type": "object",
+            "properties": {
+              "dateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "timeZone": {
+                "type": "string"
+              }
+            }
           },
           "hasAttachments": {
             "description": "The hasAttachments",
@@ -184,8 +192,16 @@
           },
           "start": {
             "description": "The start",
-            "type": "string",
-            "format": "date-time"
+            "type": "object",
+            "properties": {
+              "dateTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "timeZone": {
+                "type": "string"
+              }
+            }
           },
           "subject": {
             "description": "The subject",

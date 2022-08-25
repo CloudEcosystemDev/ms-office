@@ -76,7 +76,16 @@
       "metadata":
       {
         "in": "./lib/schemas/addContact.in.json",
-        "out": "./lib/schemas/addContact.out.json"
+        "out": {}
+      }
+    },
+    "addEvent": {
+      "title": "addEvent",
+      "main": "./lib/actions/addEvent.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addEvent.in.json",
+        "out": {}
       }
     }
   }
