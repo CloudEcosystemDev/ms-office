@@ -14,6 +14,31 @@
           "type": "string",
           "format": "date-time"
         },
+        "businessAddress": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "the business city"
+            },
+            "countryOrRegion": {
+              "type": "string",
+              "description": "the business countryOrRegion"
+            },
+            "postalCode": {
+              "type": "string",
+              "description": "the business postalCode"
+            },
+            "state": {
+              "type": "string",
+              "description": "the business state"
+            },
+            "street": {
+              "type": "string",
+              "description": "the business street"
+            }
+          }
+        },
         "businessHomePage": {
           "description": "The businessHomePage",
           "type": "string"
@@ -45,6 +70,31 @@
         "givenName": {
           "description": "The givenName",
           "type": "string"
+        },
+        "homeAddress": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "the homeAddress city"
+            },
+            "countryOrRegion": {
+              "type": "string",
+              "description": "the homeAddress countryOrRegion"
+            },
+            "postalCode": {
+              "type": "string",
+              "description": "the homeAddress postalCode"
+            },
+            "state": {
+              "type": "string",
+              "description": "the homeAddress state"
+            },
+            "street": {
+              "type": "string",
+              "description": "the homeAddress street"
+            }
+          }
         },
         "id": {
           "description": "The id",
@@ -102,6 +152,31 @@
         "title": {
           "description": "The title",
           "type": "string"
+        },
+        "otherAddress": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "the otherAddress city"
+            },
+            "countryOrRegion": {
+              "type": "string",
+              "description": "the otherAddress countryOrRegion"
+            },
+            "postalCode": {
+              "type": "string",
+              "description": "the otherAddress postalCode"
+            },
+            "state": {
+              "type": "string",
+              "description": "the otherAddress state"
+            },
+            "street": {
+              "type": "string",
+              "description": "the otherAddress street"
+            }
+          }
         },
         "yomiCompanyName": {
           "description": "The yomiCompanyName",
