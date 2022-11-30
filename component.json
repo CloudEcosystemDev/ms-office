@@ -79,9 +79,28 @@
         "out": {}
       }
     },
+    "addContactToFolder":
+    {
+      "title": "addContactToFolder",
+      "main": "./lib/actions/addContactToFolder.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addContact.in.json",
+        "out": {}
+      }
+    },
     "addEvent": {
       "title": "addEvent",
       "main": "./lib/actions/addEvent.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addEvent.in.json",
+        "out": {}
+      }
+    },
+    "addEventToCalendar": {
+      "title": "addEventToCalendar",
+      "main": "./lib/actions/addEventToCalendar.js",
       "metadata":
       {
         "in": "./lib/schemas/addEvent.in.json",
