@@ -112,7 +112,7 @@
       "main": "./lib/actions/addContactToFolder.js",
       "metadata":
       {
-        "in": "./lib/schemas/addContact.in.json",
+        "in": "./lib/schemas/addContactToFolder.in.json",
         "out": {}
       }
     },
