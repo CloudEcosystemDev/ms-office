@@ -44,6 +44,11 @@
   },
   "triggers":
   {
+    "lookup": {
+      "main": "./lib/lookups/lookup.js",
+      "title": "Function to run a lookup",
+      "description": "Function to call an internal trigger or action"
+    },
     "getContacts":
     {
       "title": "getContacts",
@@ -53,6 +58,28 @@
       {
         "in": {},
         "out": "./lib/schemas/getContacts.out.json"
+      }
+    },
+    "getContactFolders":
+    {
+      "title": "getContactFolders",
+      "main": "./lib/triggers/getContactFolders.js",
+      "type": "polling",
+      "metadata":
+      {
+        "in": {},
+        "out": "./lib/schemas/getContactFolders.out.json"
+      }
+    },
+    "getCalendars":
+    {
+      "title": "getCalendars",
+      "main": "./lib/triggers/getCalendars.js",
+      "type": "polling",
+      "metadata":
+      {
+        "in": {},
+        "out": "./lib/schemas/getCalendars.out.json"
       }
     },
     "getEvents":
@@ -79,12 +106,31 @@
         "out": {}
       }
     },
+    "addContactToFolder":
+    {
+      "title": "addContactToFolder",
+      "main": "./lib/actions/addContactToFolder.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addContactToFolder.in.json",
+        "out": {}
+      }
+    },
     "addEvent": {
       "title": "addEvent",
       "main": "./lib/actions/addEvent.js",
       "metadata":
       {
         "in": "./lib/schemas/addEvent.in.json",
+        "out": {}
+      }
+    },
+    "addEventToCalendar": {
+      "title": "addEventToCalendar",
+      "main": "./lib/actions/addEventToCalendar.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addEventToCalendar.in.json",
         "out": {}
       }
     }

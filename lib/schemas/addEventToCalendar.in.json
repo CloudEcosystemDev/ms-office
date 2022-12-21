@@ -1,9 +1,9 @@
 {
-    "type": "array",
-    "items": {
-      "type": "object",
-      "title": "Event model",
-      "description": "Event model",
+  "type": "object",
+  "properties": {
+    "requestBody": {
+      "title": "Contact model",
+      "description": "Contact model",
       "properties": {
         "allowNewTimeProposals": {
           "description": "The allowNewTimeProposals",
@@ -160,19 +160,19 @@
         "recipient": {
           "type": "object",
           "properties": {
-              "emailAddress": {
-                  "type": "object",
-                  "properties": {
-                      "address": {
-                          "type": "string",
-                          "description": "The recipient email"
-                      },
-                      "name": {
-                          "type": "string",
-                          "description": "The display name of the person"
-                      }
-                  }
+            "emailAddress": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string",
+                  "description": "The recipient email"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The display name of the person"
+                }
               }
+            }
           }
         },
         "sensitivity": {
@@ -214,4 +214,5 @@
         }
       }
     }
+  }
 }
