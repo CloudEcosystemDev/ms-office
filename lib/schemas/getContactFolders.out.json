@@ -1,0 +1,29 @@
+{
+    "type": "array",
+    "description":"List of Contact FOlders",
+    "items": {
+      "type": "object",
+      "properties": {
+        "requestBody": {
+          "title": "Contact Folder model",
+          "description": "Contact Folder model",
+          "properties": {
+            "displayName": {
+              "description": "The displayName",
+              "type": "string"
+            },
+            "id": {
+              "description": "The id",
+              "type": "string",
+              "readOnly": true
+            },
+            "parentFolderId": {
+              "description": "The parentFolderId",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+  

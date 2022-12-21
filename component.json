@@ -68,7 +68,7 @@
       "metadata":
       {
         "in": {},
-        "out": "./lib/schemas/getContacts.out.json"
+        "out": "./lib/schemas/getContactFolders.out.json"
       }
     },
     "getCalendars":
@@ -79,7 +79,7 @@
       "metadata":
       {
         "in": {},
-        "out": "./lib/schemas/getContacts.out.json"
+        "out": "./lib/schemas/getCalendars.out.json"
       }
     },
     "getEvents":
@@ -130,7 +130,7 @@
       "main": "./lib/actions/addEventToCalendar.js",
       "metadata":
       {
-        "in": "./lib/schemas/addEvent.in.json",
+        "in": "./lib/schemas/addEventToCalendar.in.json",
         "out": {}
       }
     }
