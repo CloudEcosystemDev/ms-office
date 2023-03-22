@@ -1,10 +1,10 @@
-FROM node:10-alpine
+FROM node:16-alpine
 LABEL NAME="ms-office"
 LABEL MAINTAINER CloudEcosystem "operations@openintegrationhub.com"
 LABEL SUMMARY="This image is used to start the MS Office Adapter for OIH"
 
 RUN apk --no-cache add \
-    python \
+    python3 \
     make \
     g++ \
     libc6-compat
