@@ -1,80 +1,76 @@
 {
-  "type": "object",
-  "properties": {
-    "values": {
-      "type": "array",
-      "items": {
+  "type": "array",
+  "items": {
+    "type": "object",
+    "title": "Calendar model",
+    "description": "Calendar model",
+    "properties": {
+      "canEdit": {
+        "description": "This calendar can be modified",
+        "type": "boolean"
+      },
+      "canShare": {
+        "description": "This calendar can be shared",
+        "type": "boolean"
+      },
+      "canViewPrivateItems": {
+        "description": "Private events will be visible",
+        "type": "boolean"
+      },
+      "color": {
+        "description": "Calendar events show in this color",
+        "type": "string"
+      },
+      "hexColor": {
+        "description": "Hex representation of the calendar color",
+        "type": "string"
+      },
+      "id": {
+        "description": "The id",
+        "type": "string",
+        "readOnly": true
+      },
+      "isDefaultCalendar": {
+        "description": "If this is the user's default calendar",
+        "type": "boolean"
+      },
+      "name": {
+        "description": "Calendar's name",
+        "type": "string"
+      },
+      "isTallyingResponses": {
+        "description": "The isOnlineMeeting",
+        "type": "boolean"
+      },
+      "isRemovable": {
+        "description": "If calendar can be removed",
+        "type": "boolean"
+      },
+      "owner": {
         "type": "object",
-        "title": "Calendar model",
-        "description": "Calendar model",
         "properties": {
-          "canEdit": {
-            "description": "This calendar can be modified",
-            "type": "boolean"
-          },
-          "canShare": {
-            "description": "This calendar can be shared",
-            "type": "boolean"
-          },
-          "canViewPrivateItems": {
-            "description": "Private events will be visible",
-            "type": "boolean"
-          },
-          "color": {
-            "description": "Calendar events show in this color",
-            "type": "string"
-          },
-          "hexColor": {
-            "description": "Hex representation of the calendar color",
-            "type": "string"
-          },
-          "id": {
-            "description": "The id",
-            "type": "string",
-            "readOnly": true
-          },
-          "isDefaultCalendar": {
-            "description": "If this is the user's default calendar",
-            "type": "boolean"
-          },
           "name": {
-            "description": "Calendar's name",
-            "type": "string"
+            "type": "string",
+            "description": "Owner's Name"
           },
-          "isTallyingResponses": {
-            "description": "The isOnlineMeeting",
-            "type": "boolean"
-          },
-          "isRemovable": {
-            "description": "If calendar can be removed",
-            "type": "boolean"
-          },
-          "owner": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string",
-                "description": "Owner's Name"
-              },
-              "address": {
-                "type": "string",
-                "description": "Owner's Email Address"
-              }
-            }
-          },
-          "allowedOnlineMeetingProviders": {
-            "type": "array",
-            "description": "Tools which can provide online meetings for this calendar",
-            "items": {
-              "type": "string"
-            }
-          },
-          "defaultOnlineMeetingProvider": {
-            "description": "The onlineMeetingProvider",
-            "type": "string"
+          "address": {
+            "type": "string",
+            "description": "Owner's Email Address"
           }
         }
+      },
+      "allowedOnlineMeetingProviders": {
+        "type": "array",
+        "description": "Tools which can provide online meetings for this calendar",
+        "items": {
+          "type": "string"
+        }
+      },
+      "defaultOnlineMeetingProvider": {
+        "description": "The onlineMeetingProvider",
+        "type": "string"
       }
     }
   }
 }
+
