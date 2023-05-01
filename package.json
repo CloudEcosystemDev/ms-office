@@ -1,6 +1,6 @@
 {
   "name": "ms-graph-adapter",
-  "version": "2.0.12",
+  "version": "2.1.0",
   "description": "Microsoft Graph Adapter for Open Integration Hub (based on https://github.com/elasticio/outlook/).",
   "author": "OIH <operations@openintegrationhub.com> (https://www.openintegrationhub.com/)",
   "files": [

@@ -71,6 +71,17 @@
         "out": "./lib/schemas/getContactFolders.out.json"
       }
     },
+    "getContactsInSharedMailbox":
+    {
+      "title": "getContactsInSharedMailbox",
+      "main": "./lib/triggers/getContactsInSharedMailbox.js",
+      "type": "polling",
+      "metadata":
+      {
+        "in": {},
+        "out": "./lib/schemas/getContacts.out.json"
+      }
+    },
     "getCalendars":
     {
       "title": "getCalendars",
@@ -113,6 +124,16 @@
       "metadata":
       {
         "in": "./lib/schemas/addContactToFolder.in.json",
+        "out": {}
+      }
+    },
+    "addContactToSharedMailbox":
+    {
+      "title": "addContactToSharedMailbox",
+      "main": "./lib/actions/addContactToSharedMailbox.js",
+      "metadata":
+      {
+        "in": "./lib/schemas/addContactToSharedMailbox.in.json",
         "out": {}
       }
     },
