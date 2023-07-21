@@ -1,0 +1,217 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "title": "Event model",
+      "description": "Event model",
+      "properties": {
+        "allowNewTimeProposals": {
+          "description": "The allowNewTimeProposals",
+          "type": "boolean"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string",
+              "description": "The body content"
+            },
+            "contentType": {
+              "type": "string",
+              "description": "the body content type"
+            }
+          }
+        },
+        "bodyPreview": {
+          "description": "The bodyPreview",
+          "type": "string"
+        },
+        "changeKey": {
+          "description": "The changeKey",
+          "type": "string"
+        },
+        "createdDateTime": {
+          "description": "The createdDateTime",
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "description": "The end",
+          "type": "object",
+          "properties": {
+            "dateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "timeZone": {
+              "type": "string"
+            }
+          }
+        },
+        "hasAttachments": {
+          "description": "The hasAttachments",
+          "type": "boolean"
+        },
+        "hideAttendees": {
+          "description": "The hideAttendees",
+          "type": "boolean"
+        },
+        "iCalUId": {
+          "description": "The iCalUId",
+          "type": "string"
+        },
+        "id": {
+          "description": "The id",
+          "type": "string",
+          "readOnly": true
+        },
+        "importance": {
+          "description": "The importance",
+          "type": "string"
+        },
+        "isAllDay": {
+          "description": "The isAllDay",
+          "type": "boolean"
+        },
+        "isCancelled": {
+          "description": "The isCancelled",
+          "type": "boolean"
+        },
+        "isDraft": {
+          "description": "The isDraft",
+          "type": "boolean"
+        },
+        "isOnlineMeeting": {
+          "description": "The isOnlineMeeting",
+          "type": "boolean"
+        },
+        "isOrganizer": {
+          "description": "The isOrganizer",
+          "type": "boolean"
+        },
+        "isReminderOn": {
+          "description": "The isReminderOn",
+          "type": "boolean"
+        },
+        "lastModifiedDateTime": {
+          "description": "The lastModifiedDateTime",
+          "type": "string",
+          "format": "date-time"
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "displayName": {
+              "type": "string",
+              "description": "the location displayName"
+            },
+            "locationEmailAddress": {
+              "type": "string",
+              "description": "the location locationEmailAddress"
+            },
+            "locationType": {
+              "type": "string",
+              "description": "the location locationType"
+            },
+            "uniqueId": {
+              "type": "string",
+              "description": "the location uniqueId"
+            }
+          }
+        },
+        "onlineMeeting": {
+          "type": "object",
+          "properties": {
+            "joinUrl": {
+              "description": "The joinUrl",
+              "type": "string"
+            },
+            "quickDial": {
+              "description": "The quickDial",
+              "type": "string"
+            },
+            "tollNumber": {
+              "description": "The tollNumber",
+              "type": "string"
+            }
+          }
+        },
+        "onlineMeetingProvider": {
+          "description": "The onlineMeetingProvider",
+          "type": "string"
+        },
+        "onlineMeetingUrl": {
+          "description": "The onlineMeetingUrl",
+          "type": "string"
+        },
+        "originalEndTimeZone": {
+          "description": "The originalEndTimeZone",
+          "type": "string"
+        },
+        "originalStart": {
+          "description": "The originalStart",
+          "type": "string",
+          "format": "date-time"
+        },
+        "originalStartTimeZone": {
+          "description": "The originalStartTimeZone",
+          "type": "string"
+        },
+        "recipient": {
+          "type": "object",
+          "properties": {
+              "emailAddress": {
+                  "type": "object",
+                  "properties": {
+                      "address": {
+                          "type": "string",
+                          "description": "The recipient email"
+                      },
+                      "name": {
+                          "type": "string",
+                          "description": "The display name of the person"
+                      }
+                  }
+              }
+          }
+        },
+        "sensitivity": {
+          "description": "The sensitivity",
+          "type": "string"
+        },
+        "seriesMasterId": {
+          "description": "The seriesMasterId",
+          "type": "string"
+        },
+        "showAs": {
+          "description": "The showAs",
+          "type": "string"
+        },
+        "start": {
+          "description": "The start",
+          "type": "object",
+          "properties": {
+            "dateTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "timeZone": {
+              "type": "string"
+            }
+          }
+        },
+        "subject": {
+          "description": "The subject",
+          "type": "string"
+        },
+        "type": {
+          "description": "The type",
+          "type": "string"
+        },
+        "webLink": {
+          "description": "The webLink",
+          "type": "string"
+        }
+      }
+    }
+}
