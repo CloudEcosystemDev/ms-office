@@ -1,80 +1,86 @@
 {
   "type": "object",
   "properties": {
-    "mailboxId": {
-      "description": "Id of the Shared Mailbox to create Event",
-      "type": "string"
-    },
-    "subject": {
-      "type": "string"
-    },
-    "body": {
-      "type": "object",
+    "requestBody": {
+      "title": "Event model",
+      "description": "Event model",
       "properties": {
-        "contentType": {
+        "mailboxId": {
+          "description": "Id of the Shared Mailbox to create Event",
           "type": "string"
         },
-        "content": {
-          "type": "string"
-        }
-      }
-    },
-    "start": {
-      "type": "object",
-      "properties": {
-        "dateTime": {
+        "subject": {
           "type": "string"
         },
-        "timeZone": {
-          "type": "string"
-        }
-      }
-    },
-    "end": {
-      "type": "object",
-      "properties": {
-        "dateTime": {
-          "type": "string"
-        },
-        "timeZone": {
-          "type": "string"
-        }
-      }
-    },
-    "location": {
-      "type": "object",
-      "properties": {
-        "displayName": {
-          "type": "string"
-        }
-      }
-    },
-    "attendees": {
-      "type": "array",
-      "items": [
-        {
+        "body": {
           "type": "object",
           "properties": {
-            "emailAddress": {
-              "type": "object",
-              "properties": {
-                "address": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                }
-              }
+            "contentType": {
+              "type": "string"
             },
-            "type": {
+            "content": {
               "type": "string"
             }
           }
+        },
+        "start": {
+          "type": "object",
+          "properties": {
+            "dateTime": {
+              "type": "string"
+            },
+            "timeZone": {
+              "type": "string"
+            }
+          }
+        },
+        "end": {
+          "type": "object",
+          "properties": {
+            "dateTime": {
+              "type": "string"
+            },
+            "timeZone": {
+              "type": "string"
+            }
+          }
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "displayName": {
+              "type": "string"
+            }
+          }
+        },
+        "attendees": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "emailAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "transactionId": {
+          "type": "string"
         }
-      ]
-    },
-    "transactionId": {
-      "type": "string"
+      }
     }
   }
 }
