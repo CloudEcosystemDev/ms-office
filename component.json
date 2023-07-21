@@ -1,38 +1,30 @@
 {
   "title": "Microsoft Graph Adapter",
   "description": "Microsoft Graph Adapter for Open Integration Hub (based on https://github.com/elasticio/outlook/).",
-  "envVars":
-  {
-    "MSAPP_CLIENT_ID":
-    {
+  "envVars": {
+    "MSAPP_CLIENT_ID": {
       "required": true,
       "description": ""
     },
-    "MSAPP_CLIENT_SECRET":
-    {
+    "MSAPP_CLIENT_SECRET": {
       "required": true,
       "description": ""
     }
   },
-  "credentials":
-  {
-    "fields":
-    {
-      "oauth":
-      {
+  "credentials": {
+    "fields": {
+      "oauth": {
         "label": "Authentication",
         "viewClass": "OAuthFieldView",
         "required": true
       }
     },
-    "oauth2":
-    {
+    "oauth2": {
       "client_id": "{{MSAPP_CLIENT_ID}}",
       "client_secret": "{{MSAPP_CLIENT_SECRET}}",
       "auth_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
       "token_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
-      "scopes":
-      [
+      "scopes": [
         "openid",
         "offline_access",
         "User.Read",
@@ -42,97 +34,88 @@
       ]
     }
   },
-  "triggers":
-  {
+  "triggers": {
     "lookup": {
       "main": "./lib/lookups/lookup.js",
       "title": "Function to run a lookup",
       "description": "Function to call an internal trigger or action"
     },
-    "getContacts":
-    {
+    "getContacts": {
       "title": "getContacts",
       "main": "./lib/triggers/getContacts.js",
       "type": "polling",
-      "metadata":
-      {
+      "metadata": {
         "in": {},
         "out": "./lib/schemas/getContacts.out.json"
       }
     },
-    "getContactFolders":
-    {
+    "getContactFolders": {
       "title": "getContactFolders",
       "main": "./lib/triggers/getContactFolders.js",
       "type": "polling",
-      "metadata":
-      {
+      "metadata": {
         "in": {},
         "out": "./lib/schemas/getContactFolders.out.json"
       }
     },
-    "getContactsInSharedMailbox":
-    {
+    "getContactsInSharedMailbox": {
       "title": "getContactsInSharedMailbox",
       "main": "./lib/triggers/getContactsInSharedMailbox.js",
       "type": "polling",
-      "metadata":
-      {
+      "metadata": {
         "in": {},
         "out": "./lib/schemas/getContacts.out.json"
       }
     },
-    "getCalendars":
-    {
+    "getCalendars": {
       "title": "getCalendars",
       "main": "./lib/triggers/getCalendars.js",
       "type": "polling",
-      "metadata":
-      {
+      "metadata": {
         "in": {},
         "out": "./lib/schemas/getCalendars.out.json"
       }
     },
-    "getEvents":
-    {
+    "getEvents": {
       "title": "getEvents",
       "main": "./lib/triggers/getEvents.js",
       "type": "polling",
-      "metadata":
-      {
+      "metadata": {
         "in": {},
         "out": "./lib/schemas/getEvents.out.json"
       }
-    }    
+    },
+    "getEventsFromSharedMailbox": {
+      "title": "getEventsFromSharedMailbox",
+      "main": "./lib/triggers/getEventsFromSharedMailbox.js",
+      "type": "polling",
+      "metadata": {
+        "in": {},
+        "out": "./lib/schemas/getEventsFromSharedMailbox.out.json"
+      }
+    }
   },
-  "actions":
-  {
-    "addContact":
-    {
+  "actions": {
+    "addContact": {
       "title": "addContact",
       "main": "./lib/actions/addContact.js",
-      "metadata":
-      {
+      "metadata": {
         "in": "./lib/schemas/addContact.in.json",
         "out": {}
       }
     },
-    "addContactToFolder":
-    {
+    "addContactToFolder": {
       "title": "addContactToFolder",
       "main": "./lib/actions/addContactToFolder.js",
-      "metadata":
-      {
+      "metadata": {
         "in": "./lib/schemas/addContactToFolder.in.json",
         "out": {}
       }
     },
-    "addContactToSharedMailbox":
-    {
+    "addContactToSharedMailbox": {
       "title": "addContactToSharedMailbox",
       "main": "./lib/actions/addContactToSharedMailbox.js",
-      "metadata":
-      {
+      "metadata": {
         "in": "./lib/schemas/addContactToSharedMailbox.in.json",
         "out": {}
       }
@@ -140,8 +123,7 @@
     "addEvent": {
       "title": "addEvent",
       "main": "./lib/actions/addEvent.js",
-      "metadata":
-      {
+      "metadata": {
         "in": "./lib/schemas/addEvent.in.json",
         "out": {}
       }
@@ -149,9 +131,24 @@
     "addEventToCalendar": {
       "title": "addEventToCalendar",
       "main": "./lib/actions/addEventToCalendar.js",
-      "metadata":
-      {
+      "metadata": {
         "in": "./lib/schemas/addEventToCalendar.in.json",
+        "out": {}
+      }
+    },
+    "addEventToSharedMailbox": {
+      "title": "addEventToSharedMailbox",
+      "main": "./lib/actions/addEventToSharedMailbox.js",
+      "metadata": {
+        "in": "./lib/schemas/addEventToSharedMailbox.in.json",
+        "out": {}
+      }
+    },
+    "updateEventInSharedMailbox": {
+      "title": "updateEventInSharedMailbox",
+      "main": "./lib/actions/updateEventInSharedMailbox.js",
+      "metadata": {
+        "in": "./lib/schemas/updateEventInSharedMailbox.in.json",
         "out": {}
       }
     }

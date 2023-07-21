@@ -1,14 +1,14 @@
 const { getContext, getAccessToken } = require("../common");
 const { expect } = require("chai");
-const trigger = require("../../lib/triggers/getContactsInSharedMailbox");
+const trigger = require("../../lib/triggers/getEventsFromSharedMailbox");
 
-describe("Trigger getContactsInSharedMailbox test", () => {
-  it("should return data", async () => {
+describe("Trigger getEventsFromSharedMailbox test", () => {
+  it("should return events", async () => {
     const msg = { attachments: {}, data: {}, metadata: {}, headers: {} };
     const cfg = {
       "nodeSettings":{},
       "accessToken": await getAccessToken(),
-      triggerParams:{
+      triggerParams: {
         mailboxId: 'shared@FlowMateDemo.onmicrosoft.com'
       }
     };
