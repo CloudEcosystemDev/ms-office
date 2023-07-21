@@ -8,7 +8,9 @@ describe("Trigger getEventsFromSharedMailbox test", () => {
     const cfg = {
       "nodeSettings":{},
       "accessToken": await getAccessToken(),
-      mailboxId: 'shared@FlowMateDemo.onmicrosoft.com'
+      triggerParams: {
+        mailboxId: 'shared@FlowMateDemo.onmicrosoft.com'
+      }
     };
     const snapshot = { };
     const ctx = getContext();
