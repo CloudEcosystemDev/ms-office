@@ -2,8 +2,7 @@
   "type": "object",
   "properties": {
     "requestBody": {
-      "title": "Event model",
-      "description": "Event model",
+      "type": "object",
       "properties": {
         "mailboxId": {
           "description": "Id of the Shared Mailbox to create Event",
