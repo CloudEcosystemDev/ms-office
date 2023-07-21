@@ -8,49 +8,8 @@
           "description": "Id of the Shared Mailbox to create Event",
           "type": "string"
         },
-        "subject": {
-          "type": "string"
-        },
-        "body": {
-          "type": "object",
-          "properties": {
-            "contentType": {
-              "type": "string"
-            },
-            "content": {
-              "type": "string"
-            }
-          }
-        },
-        "start": {
-          "type": "object",
-          "properties": {
-            "dateTime": {
-              "type": "string"
-            },
-            "timeZone": {
-              "type": "string"
-            }
-          }
-        },
-        "end": {
-          "type": "object",
-          "properties": {
-            "dateTime": {
-              "type": "string"
-            },
-            "timeZone": {
-              "type": "string"
-            }
-          }
-        },
-        "location": {
-          "type": "object",
-          "properties": {
-            "displayName": {
-              "type": "string"
-            }
-          }
+        "allowNewTimeProposals": {
+          "type": "boolean"
         },
         "attendees": {
           "type": "array",
@@ -69,6 +28,44 @@
                     }
                   }
                 },
+                "proposedNewTime": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": "object",
+                      "properties": {
+                        "dateTime": {
+                          "type": "string"
+                        },
+                        "timeZone": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "end": {
+                      "type": "object",
+                      "properties": {
+                        "dateTime": {
+                          "type": "string"
+                        },
+                        "timeZone": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "status": {
+                  "type": "object",
+                  "properties": {
+                    "response": {
+                      "type": "string"
+                    },
+                    "time": {
+                      "type": "string"
+                    }
+                  }
+                },
                 "type": {
                   "type": "string"
                 }
@@ -76,7 +73,360 @@
             }
           ]
         },
+        "body": {
+          "type": "object",
+          "properties": {
+            "contentType": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            }
+          }
+        },
+        "bodyPreview": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "changeKey": {
+          "type": "string"
+        },
+        "createdDateTime": {
+          "type": "string"
+        },
+        "end": {
+          "type": "object",
+          "properties": {
+            "dateTime": {
+              "type": "string"
+            },
+            "timeZone": {
+              "type": "string"
+            }
+          }
+        },
+        "hasAttachments": {
+          "type": "boolean"
+        },
+        "hideAttendees": {
+          "type": "boolean"
+        },
+        "importance": {
+          "type": "string"
+        },
+        "isAllDay": {
+          "type": "boolean"
+        },
+        "isCancelled": {
+          "type": "boolean"
+        },
+        "isDraft": {
+          "type": "boolean"
+        },
+        "isOnlineMeeting": {
+          "type": "boolean"
+        },
+        "isOrganizer": {
+          "type": "boolean"
+        },
+        "isReminderOn": {
+          "type": "boolean"
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "countryOrRegion": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "street": {
+                  "type": "string"
+                }
+              }
+            },
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "accuracy": {
+                  "type": "number"
+                },
+                "altitude": {
+                  "type": "number"
+                },
+                "altitudeAccuracy": {
+                  "type": "number"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                }
+              }
+            },
+            "displayName": {
+              "type": "string"
+            },
+            "locationEmailAddress": {
+              "type": "string"
+            },
+            "locationUri": {
+              "type": "string"
+            }
+          }
+        },
+        "locations": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string"
+                    },
+                    "countryOrRegion": {
+                      "type": "string"
+                    },
+                    "postalCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "street": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "coordinates": {
+                  "type": "object",
+                  "properties": {
+                    "accuracy": {
+                      "type": "number"
+                    },
+                    "altitude": {
+                      "type": "number"
+                    },
+                    "altitudeAccuracy": {
+                      "type": "number"
+                    },
+                    "latitude": {
+                      "type": "number"
+                    },
+                    "longitude": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "displayName": {
+                  "type": "string"
+                },
+                "locationEmailAddress": {
+                  "type": "string"
+                },
+                "locationUri": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "onlineMeeting": {
+          "type": "object",
+          "properties": {
+            "conferenceId": {
+              "type": "string"
+            },
+            "joinUrl": {
+              "type": "string"
+            },
+            "phones": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "number": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "quickDial": {
+              "type": "string"
+            },
+            "tollFreeNumbers": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "tollNumber": {
+              "type": "string"
+            }
+          }
+        },
+        "onlineMeetingProvider": {
+          "type": "string"
+        },
+        "onlineMeetingUrl": {
+          "type": "string"
+        },
+        "organizer": {
+          "type": "object",
+          "properties": {
+            "emailAddress": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "originalEndTimeZone": {
+          "type": "string"
+        },
+        "originalStart": {
+          "type": "string"
+        },
+        "originalStartTimeZone": {
+          "type": "string"
+        },
+        "recurrence": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "object",
+              "properties": {
+                "dayOfMonth": {
+                  "type": "number"
+                },
+                "daysOfWeek": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "firstDayOfWeek": {
+                  "type": "string"
+                },
+                "index": {
+                  "type": "string"
+                },
+                "interval": {
+                  "type": "number"
+                },
+                "month": {
+                  "type": "number"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            },
+            "range": {
+              "type": "object",
+              "properties": {
+                "endDate": {
+                  "type": "string"
+                },
+                "numberOfOccurrences": {
+                  "type": "number"
+                },
+                "recurrenceTimeZone": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "reminderMinutesBeforeStart": {
+          "type": "number"
+        },
+        "responseRequested": {
+          "type": "boolean"
+        },
+        "responseStatus": {
+          "type": "object",
+          "properties": {
+            "response": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            }
+          }
+        },
+        "sensitivity": {
+          "type": "string"
+        },
+        "seriesMasterId": {
+          "type": "string"
+        },
+        "showAs": {
+          "type": "string"
+        },
+        "start": {
+          "type": "object",
+          "properties": {
+            "dateTime": {
+              "type": "string"
+            },
+            "timeZone": {
+              "type": "string"
+            }
+          }
+        },
+        "subject": {
+          "type": "string"
+        },
         "transactionId": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "webLink": {
           "type": "string"
         }
       }
